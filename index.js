@@ -1,21 +1,11 @@
-const saleHotdogs = (n) => {
-  if (n < 5) {
-    return n * 100;
-  } else if (n >= 5 && n < 10) {
-    return n * 95;
-  } else {
-    return n * 90;
-  }
+const removeSmallest = (number) => {
+  let newArray = [...number];
+  let smallestNumber = Math.min.apply(this, newArray);
+  let index = newArray.indexOf(smallestNumber);
+  newArray.splice(index, 1);
+  console.log(newArray);
 };
+removeSmallest([2, 3, 4, 9, 5]);
 
-saleHotdogs(10);
-
-//Complete function saleHotdogs/SaleHotDogs/sale_hotdogs, function accepts 1 parameter:n, n is the number of hotdogs a customer will buy, different numbers have different prices (refer to the following table), return how much money will the customer spend to buy that number of hotdogs.
-
-//number of hotdogs	price per unit (cents)
-//n < 5	100
-//n >= 5 and n < 10	95
-//n >= 10	90
-
-//function saleHotdogs(n){
-//return n*(n<5?100:n<10?95:90);}
+//Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+//Don't change the order of the elements that are left.
