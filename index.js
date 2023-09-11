@@ -1,11 +1,6 @@
-const removeSmallest = (number) => {
-  let newArray = [...number];
-  let smallestNumber = Math.min.apply(this, newArray);
-  let index = newArray.indexOf(smallestNumber);
-  newArray.splice(index, 1);
-  console.log(newArray);
-};
-removeSmallest([2, 3, 4, 9, 5]);
+function isIsogram(str) {
+  return !str.match(/([a-z]).*\1/i);
+}
 
-//Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
-//Don't change the order of the elements that are left.
+//loop through the array and if a double character is found, add it to variable x. Return false is x not 0
+isIsogram('ag');
