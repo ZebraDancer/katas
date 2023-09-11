@@ -1,6 +1,21 @@
-function isIsogram(str) {
-  return !str.match(/([a-z]).*\1/i);
-}
+const openOrSenior = (data) => {
+  const array = [];
 
-//loop through the array and if a double character is found, add it to variable x. Return false is x not 0
-isIsogram('ag');
+  for (const person of data) {
+    if (person[0] >= 55 && person[1] > 7) {
+      array.push('Senior');
+    } else {
+      array.push('Open');
+    }
+  }
+  return array;
+};
+
+openOrSenior([
+  [18, 20],
+  [45, 2],
+  [61, 12],
+  [37, 6],
+  [21, 21],
+  [78, 9],
+]);
