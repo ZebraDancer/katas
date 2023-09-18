@@ -1,6 +1,5 @@
-const opposite = (n) => {
-  console.log('yo');
-  return n < 0 ? Math.abs(n) : -Math.abs(n);
+const check = (a, x) => {
+  return a.includes(x);
 };
 
-opposite(-5);
+check([101, 45, 75, 105, 99, 107], 107);
