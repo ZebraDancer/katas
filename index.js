@@ -1,5 +1,8 @@
-const check = (a, x) => {
-  return a.includes(x);
+const findShort = (str) => {
+  let str2 = str.split(' ').map((str) => {
+    return str.length;
+  });
+  return Math.min(...str2);
 };
 
-check([101, 45, 75, 105, 99, 107], 107);
+findShort('bitcoin take over the world maybe who knows perhaps');
