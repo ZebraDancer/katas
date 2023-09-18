@@ -1,6 +1,6 @@
-const filter_list = (l) => {
-  const array = l.filter((str) => str.length === undefined);
-  return array;
+const opposite = (n) => {
+  console.log('yo');
+  return n < 0 ? Math.abs(n) : -Math.abs(n);
 };
 
-filter_list([1, 2, 'a', 'b']);
+opposite(-5);
