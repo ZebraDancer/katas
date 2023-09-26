@@ -1,8 +1,3 @@
-const findShort = (str) => {
-  let str2 = str.split(' ').map((str) => {
-    return str.length;
-  });
-  return Math.min(...str2);
-};
+const solution = (str, end) => str.endsWith(end);
 
-findShort('bitcoin take over the world maybe who knows perhaps');
+solution('abcde', 'cde');
