@@ -1,8 +1,9 @@
-const digitize = (n) =>
-  n
-    .toString()
-    .split('')
-    .reverse()
-    .map((n) => parseFloat(n));
+const alphabetPosition = (str) => {
 
-digitize(2635353);
+return str.toLowerCase().split('').map(char => char.charCodeAt(0) -96).filter(char => char > 0 && char < 27).join(' ')
+
+
+};
+
+
+alphabetPosition("The sunset sets at twelve o' clock.");
