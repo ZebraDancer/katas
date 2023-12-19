@@ -1,8 +1,28 @@
-const cockroachSpeed = (s) => {
-  return Math.floor((s * 100000) / 3600);
-};
-
-cockroachSpeed(1.08);
-
-//108,000 cm / 3600
-//1 km is equal to 100,000 cm. 1 hour is equal to 3600 sec. So converted version is 7,200,000 cm / 3600 sec. = 2000 cm / sec.
+const order = (words) => {
+  if(words.length === 0) {
+    return ""
+  }
+  
+  const array = words.split(" ")  
+  
+  const arrayRange = (start, stop, step) =>
+      Array.from(
+      { length: (stop - start) / step + 1 },
+      (value, index) => start + index * step
+      );
+  
+  const range = arrayRange(1, 9, 1)
+  
+  let finalSentence = []
+  
+  for (const n of range) {
+      for (const word of array) {
+        if(word.includes(n)) {
+          finalSentence.push(word)
+        }
+     }
+  }
+  
+  return finalSentence.join(" ")
+  
+  }
